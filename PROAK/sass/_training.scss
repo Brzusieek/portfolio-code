@@ -1,0 +1,80 @@
+@media screen and (min-width: $min-xs) {
+  section#training {
+
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/szkolenia.jpg');
+      }
+    }
+
+    article {
+      padding-bottom: 10px;
+      .training-box {
+
+        padding: 20px 0;
+        position: relative;
+
+      }
+
+      h3{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 0;
+        text-align: left;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+@media screen and (min-width: $min-sm) {
+  section#training {
+
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/szkolenia_warsztaty.png');
+      }
+    }
+
+    article {
+
+      .training-box {
+        padding: 30px 0;
+      }
+
+      h3{
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media screen and (min-width: $min-lg) {
+  section#training {
+
+    article {
+
+      h3{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 22px;
+        text-align: left;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .training-box {
+
+    padding: 30px 0;
+    position: relative;
+
+  }
+}

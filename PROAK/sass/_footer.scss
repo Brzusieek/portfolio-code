@@ -1,0 +1,68 @@
+@media screen and (min-width: $min-xs) {
+
+  footer {
+    background: white;
+    padding: 10px 0;
+  }
+  .copy-right {
+    color: $green-color;
+    margin: 0;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .shorcut-icons {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+
+    .shorcut-item {
+      cursor: pointer;
+      border: 1px solid $green-color;
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      width: 95px;
+
+      img {
+        cursor: pointer;
+        height: 40px;
+      }
+
+      p {
+        cursor: pointer;
+        color: $green-color;
+        margin: 10px 0 0 0;
+        text-transform: uppercase;
+      }
+
+      &.last {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+        img {
+          float:left;
+          margin-left: 22px;
+        }
+        p {
+          float: left;
+          margin: 5px 0 0 10px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+}
+@media screen and (min-width: $min-md) {
+
+  footer {
+    background: black;
+  }
+
+  .shorcut-icons {
+    display: none;
+  }
+
+}

@@ -1,0 +1,374 @@
+@media screen and (min-width: $min-xs) {
+
+  html {
+    background: black;
+  }
+
+  body {
+    background: black;
+    padding-top: 90px;
+
+    &.s-normal {
+      section {
+        padding: 40px 0 !important;
+        height: auto !important;
+
+        &.carousel {
+          padding: 0 !important;
+        }
+      }
+    }
+    &.sh-collapsed {
+      article {
+        padding-top: 20px;
+        h3 {
+          margin-top: 0;
+        }
+        form {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .scroll-up {
+    background: $green-color;
+    cursor: pointer;
+    font-size: 40px;
+    height: 40px;
+    line-height: 1;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    width: 40px;
+    z-index: 101;
+
+    i {
+      color: white;
+      cursor: inherit;
+    }
+  }
+
+  * {
+    color: $grey-text;
+    cursor: context-menu;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  a:hover,
+  a:focus,
+  a:visited,
+  a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+
+  .text-collapse {
+    padding: 30px 0;
+    position: relative;
+
+    .item-description {
+      font-size: 16px;
+      overflow: hidden;
+      text-align: justify;
+    }
+
+    .read-more {
+      color: $green-color;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'helveticaNeue';
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      bottom: 8px;
+    }
+  }
+
+  section {
+    $ptb-mtb: 10px;
+
+    background-color: white;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    &.open-section {
+
+      header {
+        h1, .h1,
+        h2, .h2 {
+          color: #555555;
+          text-shadow: none;
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    header {
+      margin-bottom: $ptb-mtb;
+      text-transform: uppercase;
+      text-align: center;
+
+      h1, .h1,
+      h2, .h2 {
+        position: relative;
+        z-index: 2;
+        border: 2px solid $green-color;
+        cursor: pointer;
+        color: white;
+        display: inline-block;
+        font-size: 26px;
+        margin: 0 auto;
+        padding: 15px 20px;
+        position: relative;
+        text-shadow: 2px 2px 2px black;
+        @include transition(color .8s, text-shadow .8s, opacity .8s);
+        //max-width: 440px;
+        width: 80%;
+
+        &:before {
+          background-position: center center;
+          background-size: cover;
+          content: "";
+          height: 100%;
+          opacity: 1;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          @include transition-all(0.8s);
+          width: 100%;
+          z-index: -1;
+        }
+      }
+
+    }
+
+
+  }
+
+  article {
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+    max-width: 1920px;
+    z-index: 1;
+
+    h3 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+  }
+
+  .attention {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 30px 5px 0;
+    text-align: left;
+    text-transform: lowercase;
+
+    b {
+      color: $green-color;
+      font-family: 'helveticaNeue';
+      font-size: 14px;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+    span {
+      font-family: 'helveticaNeue';
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  .green-square {
+    $wh-sq: 10px;
+
+    color: $green-color;
+    font-style: italic;
+    position: relative;
+    padding-left: 2*$wh-sq+6;
+
+    &:after {
+      background: $green-color;
+      content: " ";
+      display: block;
+      height: $wh-sq;
+      position: absolute;
+      top: 3px;
+      left: $wh-sq/2;
+      @include transform-rotate(45deg);
+      width: $wh-sq;
+    }
+
+  }
+
+  ul.ul-green-square {
+    $wh-sq: 8px;
+    li {
+      $p-tb: 5px;
+      list-style-type: none;
+      padding: $p-tb 0;
+      position: relative;
+
+      &:after {
+        background: $green-color;
+        content: " ";
+        display: block;
+        height: $wh-sq+1;
+        position: absolute;
+        top: 8px;
+        left: -$wh-sq - 5px;
+        @include transform-rotate(45deg);
+        width: $wh-sq;
+      }
+    }
+  }
+
+  .b-close-section {
+    background: $green-color;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-transform: uppercase;
+  }
+}
+@media (min-width: $min-sm) {
+
+  * {
+    font-size: 16px;
+  }
+
+  section {
+
+     header {
+
+       h1, .h1,
+       h2, .h2 {
+         font-size: 36px;
+
+       }
+
+     }
+
+  }
+
+  article {
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .attention {
+      font-size: 16px;
+
+      b {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .green-square {
+    $wh-sq: 12px;
+    padding-left: 2*$wh-sq+6;
+    top: 5px;
+
+    &:after {
+      height: $wh-sq;
+      left: $wh-sq/2;
+      width: $wh-sq;
+    }
+
+  }
+}
+@media (min-width: $min-md) {
+
+  body {
+    padding-top: 0;
+  }
+
+  section {
+    $ptb-mtb: 45px;
+
+    height: auto;
+    margin: 0 auto;
+
+    border: 1px solid #9fc445;
+    border-width: 0 0 1px 0;
+
+    header {
+      margin-bottom: 35px;
+
+      h1, .h1,
+      h2, .h2 {
+        cursor: context-menu;
+        color: #555555;
+        text-shadow: none;
+        width: auto;
+
+        &:before {
+          opacity: 0;
+        }
+
+      }
+
+
+    }
+
+  }
+
+  article {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: $min-xl) {
+  section {
+
+    header {
+
+      h1, .h1,
+      h2, .h2 {
+        width: auto;
+      }
+
+    }
+
+  }
+  article {
+
+    h3 {
+    }
+
+    .attention {
+
+      b {
+      }
+    }
+  }
+}

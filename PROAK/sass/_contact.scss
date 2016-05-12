@@ -1,0 +1,134 @@
+@media screen and (min-width: $min-xs) {
+
+  .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none;
+  }
+
+  $borderColor: $green-color;
+
+  #contact {
+
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/kontakt.jpg');
+      }
+    }
+
+    &.open-section, &.close-section {
+      @include transition(background 0.8s);
+    }
+
+    &.open-section {
+      background: black;
+
+      header h1,
+      header .h1,
+      header h2,
+      header .h2 {
+        color: white;
+      }
+    }
+
+
+    border: none;
+
+    .title-section {
+      color: white;
+    }
+
+    article {
+      * {
+        color: white;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  .contact-info {
+    margin: 20px auto;
+    text-align: center;
+
+    p {
+      display: inline-block;
+      margin: 5px 20px;
+      text-transform: lowercase;
+
+      &:nth-child(1) {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  #contact-form {
+
+    button {
+      background: transparent;
+      border: 1px solid $borderColor;
+      border-radius: 0;
+      font-weight: bold;
+      margin-top: 15px;
+      padding: 10px 15px;
+      text-transform: uppercase;
+    }
+
+    fieldset {
+      margin: 15px 0;
+
+      input, textarea {
+        border: 1px solid #9fc445;
+        background: transparent;
+        border-radius: 0;
+        color: $green-color;
+        cursor: text;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px 20px;
+        resize: none;
+        text-align: left;
+        width: 100%;
+
+        &:focus,
+        &:active,
+        &:visited,
+        &:hover {
+          outline: none;
+        }
+      }
+
+      $color-placeholder: rgba(159, 196, 69, 0.5);
+      ::-webkit-input-placeholder {
+        color: $color-placeholder;
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+        color: $color-placeholder;
+      }
+
+      ::-moz-placeholder {  /* Firefox 19+ */
+        color: $color-placeholder;
+      }
+
+      :-ms-input-placeholder {
+        color: $color-placeholder;
+      }
+    }
+  }
+
+}
+@media screen and (min-width: $min-md) {
+
+
+  #contact {
+    background: black;
+    padding: 40px 0;
+
+  }
+
+}

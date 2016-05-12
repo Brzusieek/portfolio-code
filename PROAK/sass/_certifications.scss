@@ -1,0 +1,51 @@
+
+@media screen and (min-width: $min-xs) {
+
+  section#certifications {
+
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/certyfikaty.jpg');
+      }
+    }
+
+  }
+  .cert {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    width: 50%;
+
+     img {
+       border: 1px solid black;
+       cursor: -webkit-zoom-in;
+       @include box-shadow1(5px 5px 14px -5px #555555);
+       @include transition(all .5s);
+       width: 100%;
+       height: 100%;
+       &:hover {
+         @include transform-scale(1.1);
+         @include box-shadow1(5px 5px 14px -5px #555555 $green-color);
+       }
+     }
+
+   }
+
+}
+@media screen and (min-width: $min-sm) {
+
+  .cert {
+    width: 33.3333%;
+   }
+
+}
+@media screen and (min-width: $min-md) {
+
+  .cert {
+    width: 12.5%;
+   }
+
+}

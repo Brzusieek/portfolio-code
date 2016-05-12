@@ -1,0 +1,78 @@
+@media screen and (min-width: $media-query-xs) {
+
+  body {
+    font-family: Roboto, Arial, sans-serif;
+  }
+
+  section {
+    padding: 75px 30px;
+    background: $bg-light;
+
+
+    .btn {
+      background: $samm-red-light;
+      border-radius: 0;
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 10px 25px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: $samm-red;
+      }
+    }
+
+    article {
+      text-align: justify;
+      text-transform: none;
+      b {
+        color: $samm-red;
+      }
+    }
+
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 75px;
+
+    p {
+      color: #c94645;
+      display: block;
+      font-size: 12px;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 5px;
+      margin-bottom: 25px;
+      text-indent: 0 !important;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: $samm-grey;
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      position: relative;
+      text-transform: uppercase;
+
+      &:after {
+        background: $samm-red;
+        content: "";
+        display: inline-block;
+        height: 6px;
+        margin-right: -30px;
+        position: absolute;
+        right: 50%;
+        bottom: 0;
+        width: 60px;
+      }
+    }
+  }
+
+}

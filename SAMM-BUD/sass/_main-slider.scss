@@ -1,0 +1,108 @@
+@media screen and (min-width: $media-query-xs) {
+
+  #fssPrev,
+  #fssNext,
+  #fssPlayPause,
+  #fssList {
+    display: none;
+  }
+
+  section#main-slider {
+    background: white;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index:1;
+
+    &:after {
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+
+  .title-box {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    right: 30px;
+    left: 30px;
+    @include transform(translateY(-50%));
+    z-index: 3;
+
+    img {
+      width: 300px;
+    }
+
+  }
+
+  .scroll-down-bg {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+    left: 60px;
+    height: 38px;
+    background-image: url(../images/bg-pasek.png);
+    background-repeat: repeat;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      left: -60px;
+      bottom: 0;
+      width: 60px;
+      height: 38px;
+      background-image: url(../images/bg-lewy-luk.png);
+    }
+    &:before {
+      content: " ";
+      position: absolute;
+      right: -60px;
+      bottom: 0;
+      width: 60px;
+      height: 38px;
+      background-image: url(../images/bg-prawy-luk.png);
+    }
+
+    span {
+      background-image: url(../images/bg-scroll-down.png);
+      display: block;
+      height: 63px;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      @include transform(translateX(-50%));
+      width: 227px;
+      z-index: 1;
+    }
+
+    i {
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+      border-radius: 100%;
+      background: $samm-red;
+      text-align: center;
+      @include box-shadow(0 0 11px rgba(0, 0, 0, 0.33));
+      opacity: 1;
+      color: white;
+      line-height: 1;
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      @include transform(translateX(-50%));
+      z-index: 1;
+    }
+  }
+
+}
+
+
+

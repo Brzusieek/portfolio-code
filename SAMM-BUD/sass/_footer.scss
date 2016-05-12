@@ -1,0 +1,26 @@
+@media screen and (min-width: $media-query-xs) {
+
+  footer#footer {
+    background: $samm-grey-oryg;
+  }
+
+  article.footer-container {
+    font-size: 12px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+
+    p {
+      color: white;
+      margin: 0;
+      padding: 25px 0;
+      background: #2d2d37;
+
+      &:nth-child(2) {
+        padding: 25px 0;
+        background: #c94645;
+      }
+    }
+  }
+
+}

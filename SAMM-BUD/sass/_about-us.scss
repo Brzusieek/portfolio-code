@@ -1,0 +1,8 @@
+@media screen and (min-width: $media-query-xs) {
+  #about-us {
+    .img-responsive {
+      width: 300px;
+      margin-top: -52px;
+    }
+  }
+}

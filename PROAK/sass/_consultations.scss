@@ -1,0 +1,13 @@
+
+@media screen and (min-width: $min-xs) {
+  #consultations {
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/konsultacje.jpg');
+      }
+    }
+  }
+}

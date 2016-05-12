@@ -1,0 +1,41 @@
+@media screen and (min-width: $media-query-xs) {
+
+  section#filary {
+    background: $samm-red;
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0 0 11px rgba(0, 0, 0, 0.43);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.43);
+    z-index: 1;
+    position: relative;
+
+    header {
+      p {
+        color: white;
+      }
+    }
+  }
+
+
+
+  .item-filar {
+
+    span {
+      background: $samm-red;
+      display: inline-block;
+      padding: 7px;
+      border-radius: 100%;
+      width: 114px;
+
+      i {
+        color: white;
+        font-size: 100px;
+        line-height: 1;
+      }
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+}

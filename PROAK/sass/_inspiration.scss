@@ -1,0 +1,56 @@
+@media screen and (min-width: $min-xs) {
+
+  #inspiration {
+
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/inspirujaceartykuly.jpg');
+      }
+    }
+
+  }
+
+  .pdf-info {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+
+    img {
+      border: 1px solid black;
+      @include box-shadow1(5px 5px 14px -5px #555555);
+      cursor: pointer;
+      @include transition(all .5s);
+      width: 100%;
+      &:hover {
+        @include transform-scale(1.1);
+        @include box-shadow1(5px 5px 14px -5px #555555 $green-color);
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: $min-sm) {
+
+  .pdf-info {
+    width: 25%;
+  }
+
+}
+@media screen and (min-width: $min-md) {
+
+  .pdf-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .pdf-info {
+    padding: 0 20px;
+  }
+
+}

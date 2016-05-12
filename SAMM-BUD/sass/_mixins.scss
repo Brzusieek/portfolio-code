@@ -1,0 +1,19 @@
+@mixin animate($time...) {
+    -webkit-transition: $time;
+    -moz-transition: $time;
+    -ms-transition: $time;
+    -o-transition: $time;
+    transition: $time;
+}
+@mixin transform($a...) {
+    -webkit-transform: $a;
+    -moz-transform: $a;
+    -ms-transform: $a;
+    -o-transform: $a;
+    transform: $a;
+}
+@mixin box-shadow($a...) {
+    -webkit-box-shadow: $a;
+    -moz-box-shadow: $a;
+    box-shadow: $a;
+}

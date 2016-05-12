@@ -1,0 +1,81 @@
+@media screen and (min-width: $media-query-xs) {
+
+  #project-detalis {
+
+    $zielony-logo: #39B54A;
+
+
+
+    h3 {
+      color: $zielony-logo;
+    }
+
+    b {
+      color: $zielony-logo;
+      font-weight: bold;
+    }
+
+    p {
+      text-indent: 25px;
+    }
+
+
+  }
+
+  #projects-container {
+    width: 70%;
+    margin: 80px auto;
+
+    img.img-responsive {
+      @include box-shadow(0px 0px 9px 3px rgba(0,0,0,0.33));
+      margin: 10px;
+    }
+
+    .carousel-indicators {
+      bottom: -55px;
+
+      .active {
+        background: #aaa;
+        width: 14px;
+        height: 14px;
+        margin: 1px;
+      }
+
+      li {
+        border: 1px solid #aaa;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+      }
+    }
+
+    .carousel-control {
+      text-shadow: none;
+      &.right, &.left {
+        background-image: none;
+        color: #777;
+        font-size: 90px;
+      }
+      &.right {
+        right: -115px;
+      }
+      &.left {
+        left: -115px;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: $media-query-md) {
+
+  #project-detalis {
+
+    p {
+      text-indent: 25px;
+    }
+
+  }
+
+}
+

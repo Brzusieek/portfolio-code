@@ -1,0 +1,243 @@
+header.main-header {
+
+  @media screen and (min-width: $min-xs) {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    z-index: 101;
+    @include transition-all(1s);
+
+    img.owner-photo {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      @include transition-all(1s);
+      opacity: 1;
+    }
+
+    img.collapse-section {
+      cursor: pointer;
+      height: 56px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      @include transition(all .5s);
+
+      &:hover,
+      &:active,
+      &:focus {
+        @include transform-scale(0.9,0.9);
+      }
+    }
+
+    .page-title {
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+    }
+
+    $heightLogo : 120px;
+
+    .proak-logo {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: 0;
+      height: $heightLogo;
+      padding: 15px;
+
+      @include transition-all(0.8s);
+      @include trans-translateX(-50%);
+    }
+
+    .sign-owner {
+      font-size: 22px;
+      font-weight: bold;
+      font-family: 'freescpt';
+      margin: 0;
+      position: absolute;
+      top: $heightLogo - 5px;
+      left: 50%;
+      text-transform: capitalize;
+
+      @include transition-all(0.8s);
+      @include trans-translateX(-50%);
+    }
+
+    .title-description {
+
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      position: absolute;
+      right: 84px;
+      left: 50%;
+      margin: 0;
+      top: $heightLogo + 32px + 5px;
+      text-align: left;
+      max-width: 250px;
+
+      @include transition-all(0.8s);
+      @include trans-translateX(-50%);
+    }
+
+
+    .icons-nav {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 79px;
+      z-index: 1;
+      height: 88px;
+
+
+      div {
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: bold;
+        float: left;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+
+        span {
+          cursor: inherit;
+          display: block;
+          line-height: 1;
+        }
+
+        img {
+          cursor: inherit;
+          height: 32px;
+        }
+
+      }
+
+    }
+
+    &.header-collapsed {
+      height: 90px;
+
+      img.owner-photo {
+        opacity: 0;
+        left: -100px;
+        height: 100%;
+      }
+
+
+      .page-title {
+        $heightLogo : 86px;
+        color: white;
+
+      }
+
+      .proak-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $heightLogo;
+        @include trans-translateX(0);
+      }
+
+      .sign-owner {
+        top: 10px;
+        left: 85px;
+        @include trans-translateX(0);
+      }
+
+      .title-description {
+        top: 38px;
+        left: 82px;
+        font-size: 12px;
+        @include trans-translateX(0);
+        max-width: 280px;
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: $min-sm) {
+
+    img.owner-photo {
+      display: block;
+    }
+
+    .proak-logo {
+    }
+
+    .sign-owner {
+      font-size: 24px;
+      top: 115px;
+    }
+
+    .title-description {
+      top: 150px;
+      text-align: center;
+    }
+
+
+    &.header-collapsed {
+
+      .proak-logo {
+      }
+
+      .sign-owner {
+        top: 14px;
+        font-size: 24px;
+      }
+
+      .title-description {
+        top: 44px;
+        right: 200px;
+        text-align: left;
+      }
+
+    }
+  }
+  @media screen and (min-width: $min-md) {
+
+    .icons-nav {
+      display: inline-block;
+    }
+
+    img.owner-photo {
+      display: block;
+    }
+    img.collapse-section {
+      display: none;
+    }
+
+    .sign-owner {
+      font-size: 36px;
+    }
+
+    &.header-collapsed {
+
+      .sign-owner {
+        top: 15px;
+        font-size: 36px;
+      }
+
+      .title-description {
+        top: 51px;
+      }
+
+    }
+  }
+
+}

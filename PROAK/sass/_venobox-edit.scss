@@ -1,0 +1,83 @@
+.vbox-overlay {
+  $bg-vbox: grey;
+
+  .vbox-container {
+    background: transparent;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    right: 70px;
+    bottom: 10px;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: auto;
+    max-width: none;
+
+    .vbox-content {
+      padding: 0 !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      div {
+        background: grey;
+        display: inline-block !important;
+        padding: 10px !important;
+        width: auto;
+
+        img.figlio {
+          max-height: 100%;
+          max-width: 100%;
+          cursor: -webkit-grab;
+          &:active {
+            cursor: -webkit-grabbing;
+          }
+        }
+      }
+
+    }
+  }
+
+  .vbox-close {
+    background: none;
+    cursor: pointer;
+    color: $green-color;
+    padding: 10px 10px 10px 0;
+    text-indent: 0;
+    width: auto;
+  }
+
+  .vbox-title {
+    border-bottom: 1px solid $green-color;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 5px 68px;
+    height: auto;
+    text-transform: uppercase;
+    color: $green-color;
+  }
+  .vbox-num {
+    background: $green-color;
+  }
+  .vbox-next {
+    background: url(../images/controls/next.png) center center no-repeat;
+  }
+  .vbox-prev {
+    background: url(../images/controls/previous.png) center center no-repeat;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vbox-overlay {
+    .vbox-next {
+      display: none;
+    }
+    .vbox-prev {
+      display: none;
+    }
+  }
+}

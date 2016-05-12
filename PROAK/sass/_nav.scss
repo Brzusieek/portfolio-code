@@ -1,0 +1,174 @@
+
+
+@media screen and (min-width: $min-xs) {
+  nav {
+    background: $green-color;
+    display: none;
+    position: fixed;
+    right: -225px;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    @include transition-all(0.8s);
+    width: 225px;
+    z-index: 101;
+
+    .mt-xl {
+      margin-top: 38px;
+    }
+
+    &.nav-collapsed {
+      right: 0;
+      .nav-button {
+
+        span {
+          background: $green-color;
+          height: 4px;
+
+          &.top {
+            top: 18px;
+            @include transform-rotate(315deg);
+          }
+          &.middle {
+            opacity: 0;
+          }
+          &.bottom {
+            top: 18px;
+            @include transform-rotate(-315deg);
+          }
+
+
+        }
+      }
+
+    }
+
+  }
+
+  .nav-button-box {
+    background: black;
+    color: white;
+    padding: 15px 15px 0 15px;
+    position: absolute;
+    top: 0;
+    left: -79px;
+
+    span {
+      display: block;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .nav-button {
+      color: black;
+      cursor: pointer;
+      height: 36px;
+      padding: 0;
+      position: relative;
+      width: 48px;
+
+      span {
+        background: $green-color;
+        cursor: pointer;
+        height: 2px;
+        position: absolute;
+        width: 48px;
+        @include transition-all(1s);
+
+        &.top {
+          top: 10px;
+        }
+        &.middle {
+          @include transition-all(0.3s);
+          top: 22px;
+        }
+        &.bottom {
+          top: 34px;
+        }
+
+
+      }
+    }
+
+    div {
+      color: white;
+      display: inline-block;
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        line-height: 1;
+      }
+
+      img {
+        height: 32px;
+      }
+
+    }
+
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    ul.navbar-nav {
+      float: none;
+      margin: 0;
+      li {
+        float: none;
+        a {
+          color: black;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 18px;
+          padding: 5px 0;
+          text-decoration: none;
+          text-transform: uppercase;
+          width: 100%;
+
+          img {
+            cursor: inherit;
+            margin: 0 15px 0 18px;
+          }
+          span {
+            cursor: inherit;
+            color: inherit;
+          }
+        }
+
+        &:hover {
+          background: white;
+        }
+
+        &.line-break {
+
+          border-top: 1px solid black;
+          padding: 0;
+          margin: 25px auto;
+          width: 185px;
+        }
+      }
+    }
+
+    div p {
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: $min-md) {
+  nav {
+    display: block;
+  }
+}

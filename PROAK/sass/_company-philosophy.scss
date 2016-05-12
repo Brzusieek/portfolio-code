@@ -1,0 +1,22 @@
+
+@media screen and (min-width: $min-xs) {
+
+  #company-philosophy {
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/filozofiafirmy.jpg');
+      }
+    }
+    h3 {
+      color: $green-color;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    b {
+      color: $green-color;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@media (min-width: $min-xs) {
+  .quotation {
+    display: none;
+  }
+}
+@media (min-width: $min-md) {
+
+  .quotation {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    font-family: 'helveticaNeue';
+    padding: 50px 20px;
+    position: relative;
+    text-align: right;
+    min-height: 300px;
+
+    &:after {
+      background: rgba(0,0,0,0.2);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    h3 {
+      color: white;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: normal;
+      letter-spacing: 3px;
+      text-align: inherit;
+      text-shadow: 1px 1px 4px grey;
+      max-width: 920px;
+      margin-top: 0;
+    }
+
+    em {
+      color: white;
+      display: block;
+      font-family: 'helveticaNeue';
+      font-size: 26px;
+    }
+
+    &.q-1 {
+      background-image: url('../images/szkolenia_warsztaty.png');
+      h3 {
+        margin-left: auto;
+      }
+    }
+    &.q-2 {
+      background-image: url('../images/warsztaty_konsultacje.png');
+      h3 {
+        margin-right: auto;
+      }
+    }
+    &.q-3 {
+      background-image: url('../images/konsultacje_filozofiafirmy.jpg');
+      h3 {
+        margin-left: auto;
+      }
+    }
+    &.q-4 {
+      background-image: url('../images/filozofiafirmy_omnie.png');
+      h3 {
+        margin-right: auto;
+      }
+    }
+    &.q-5 {
+      background-image: url('../images/omnie_certyfikaty.png');
+      h3 {
+        margin-left: auto;
+      }
+    }
+    &.q-6 {
+      background-image: url('../images/cert-refpodz.png');
+      h3 {
+        margin-right: auto;
+      }
+    }
+    &.q-7 {
+      background-image: url('../images/referencje_inspirujaceartykuly.jpg');
+      h3 {
+        margin-left: auto;
+      }
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+
+  }
+
+
+}
+
+@media (min-width: $min-lg) {
+
+  .quotation {
+
+    h3 {
+      font-size: 35px;
+
+    }
+
+  }
+
+}
+

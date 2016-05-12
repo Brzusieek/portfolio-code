@@ -1,0 +1,40 @@
+@media screen and (min-width: $media-query-xs) {
+
+  header#header {
+    background: rgba(255,255,255,1);
+    -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0 0 11px rgba(0, 0, 0, 0.33);
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.33);
+    opacity: 0;
+    padding: 10px 0;
+    position: fixed;
+    top: -71px;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    @include animate(all 0.6s);
+  }
+
+  .logo-containter {
+    display: inline-block;
+    padding: 0 15px;
+
+  }
+
+  .logo-samm-bud {
+    display: inline-block;
+    height: 40px;
+    opacity: 1;
+  }
+
+  body.scrolled {
+
+    header#header {
+      top: 0;
+      opacity: 1;
+    }
+
+  }
+
+}
+

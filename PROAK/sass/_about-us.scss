@@ -1,0 +1,18 @@
+
+@media screen and (min-width: $min-xs) {
+
+  #about-us {
+    header h1,
+    header .h1,
+    header h2,
+    header .h2 {
+      &:before {
+        background-image: url('../images/h-bg-rwd/omnie.jpg');
+      }
+    }
+
+    b {
+      color: $green-color;
+    }
+  }
+}
